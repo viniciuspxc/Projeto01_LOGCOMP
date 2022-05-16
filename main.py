@@ -6,10 +6,22 @@ print(formula)
 
 for x in atoms(formula):
   print(x)"""
+"""
+#PI>0.42 -> P
+# (1 -> 1)= 1
+# (1 -> 0)= 0
 
 my_formula = Implies(Not(Atom('p')), Or(Atom('p'), Atom('s')))
-print(my_formula)
-print(substitution(my_formula,Not(Atom('p')),And(Atom('a'),Atom('p'))))
 
+#print(my_formula)
+
+for subformula in subformulas(my_formula):
+        print(subformula)
+#print(substitution(my_formula,Not(Atom('p')),And(Atom('a'),Atom('p'))))"""
+
+interpretation={'p': True, 'q': False}
+form = Implies(Atom('q'),Atom('p'))
+
+print(truth_value(form,interpretation))
 
 
