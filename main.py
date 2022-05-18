@@ -17,11 +17,13 @@ my_formula = Implies(Not(Atom('p')), Or(Atom('p'), Atom('s')))
 
 for subformula in subformulas(my_formula):
         print(subformula)
-#print(substitution(my_formula,Not(Atom('p')),And(Atom('a'),Atom('p'))))"""
+#print(substitution(my_formula,Not(Atom('p')),And(Atom('a'),Atom('p'))))
 
 interpretation={'p': True, 'q': False}
 form = Implies(Atom('q'),Atom('p'))
 
 print(truth_value(form,interpretation))
+"""
 
-
+f=And(And(Not(Atom('a')),Not(Atom('b'))),Not(Atom('c')))
+satisfiability_brute_force(f)
