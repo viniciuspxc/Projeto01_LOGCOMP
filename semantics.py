@@ -80,3 +80,19 @@ def sat_check(formula, atomicas, valoracao):
         return val1_result
     else:
         return sat_check(formula, atomicas, val2)
+
+
+#Funções para criar and/or de multiplas formulas
+def and_all(lista_formulas):
+    and_formulas = lista_formulas[0]
+    del lista_formulas[0]
+    for formula in lista_formulas:
+        and_formulas = And(and_formulas, formula)
+    return and_formulas
+
+def or_all(lista_formulas):
+    or_formulas = lista_formulas[0]
+    del lista_formulas[0]
+    for formula in lista_formulas:
+        or_formulas = Or(or_formulas, formula)
+    return or_formulas
