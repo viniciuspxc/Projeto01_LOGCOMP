@@ -58,7 +58,7 @@ def satisfiability_brute_force(formula):
 
     result = sat_check(formula, atomicas, valoracao)
 
-    print(result)
+    return(result)
 
 
 def sat_check(formula, atomicas, valoracao):
